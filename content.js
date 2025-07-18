@@ -20,12 +20,13 @@ async function getRephrasedProblem(company) {
 
   try {
     const titleElement = document.querySelector('div.text-title-large');
+    var probTitle = titleElement.innerText;
     const fullProblemText = `Title: ${titleElement.innerText}\n\nDescription:\n${descriptionContainer.innerHTML}`;
 
     const response = await fetch('http://localhost:3000/rephrase', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text: fullProblemText, company: company }),
+      body: JSON.stringify({ text: fullProblemText, title: probTitle, company: company }),
     });
 
     if(!response.ok){ throw new Error(`Server error! Status: ${response.status}`); }

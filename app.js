@@ -13,6 +13,7 @@ app.use(express.json());
 app.post('/rephrase', async (req, res) => {
   try {
     const { text: originalProblem, title, company } = req.body;
+    console.log(title)
     const companyName = company || 'MAANG';
     const prompt = `
       You are an expert interview question designer at ${companyName}.
@@ -29,6 +30,7 @@ app.post('/rephrase', async (req, res) => {
       Here is the original problem title to rephrase:
       ---
       ${title}
+      ${originalProblem}
       ---
     `;
 
