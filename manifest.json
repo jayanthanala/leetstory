@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "leetlearn",
+  "version": "0.1.0",
+  "description": "Rephrases LeetCode problems into real-world interview scenarios.",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://leetcode.com/problems/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "LeetLearn"
+  }
+  
+}
