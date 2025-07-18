@@ -11,6 +11,7 @@ const companyLogos = {
 async function getRephrasedProblem(company) {
   const descriptionContainer = document.querySelector(descriptionContainerSelector);
   if(!descriptionContainer) return;
+  var desc = descriptionContainer.innerHTML;
   descriptionContainer.innerHTML = `
     <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 250px; font-family: sans-serif; text-align: center;">
       <p style="font-size: 1.1em; font-weight: bold; margin: 0; color: var(--text-secondary);">Rephrasing problem for ${company}...</p>
@@ -21,7 +22,7 @@ async function getRephrasedProblem(company) {
   try {
     const titleElement = document.querySelector('div.text-title-large');
     var probTitle = titleElement.innerText;
-    const fullProblemText = `Title: ${titleElement.innerText}\n\nDescription:\n${descriptionContainer.innerHTML}`;
+    const fullProblemText = `Description:\n${desc}`;
 
     const response = await fetch('http://localhost:3000/rephrase', {
       method: 'POST',
@@ -56,12 +57,12 @@ function injectUI() {
       controlsDiv.style.gap = '12px';
       controlsDiv.style.marginTop = '10px';
 
-      // const labelSpan = document.createElement('span');
-      // labelSpan.style.fontSize = '13px';
-      // labelSpan.style.fontWeight = 'bold';
-      // labelSpan.style.color = 'rgb(175, 175, 175)';
-      // labelSpan.textContent = 'Story Mode:';
-      // controlsDiv.appendChild(labelSpan);
+      const labelSpan = document.createElement('span');
+      labelSpan.style.fontSize = '13px';
+      labelSpan.style.fontWeight = 'bold';
+      labelSpan.style.color = 'white';
+      labelSpan.textContent = 'Context: ';
+      controlsDiv.appendChild(labelSpan);
 
       for (const company in companyLogos) {
         const logoUrl = companyLogos[company];
