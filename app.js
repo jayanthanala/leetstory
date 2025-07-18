@@ -13,7 +13,6 @@ app.use(express.json());
 app.post('/rephrase', async (req, res) => {
   try {
     const { text: originalProblem, title, company } = req.body;
-    console.log(originalProblem)
     const companyName = company || 'MAANG';
     const prompt = `
      You are an expert interview question designer at ${companyName}. Your task is to rephrase a LeetCode problem into a narrative scenario, formatted in clean HTML.

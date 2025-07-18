@@ -2,10 +2,11 @@ const difficultyTagSelector = 'div[class*="text-difficulty-"]';
 const descriptionContainerSelector = 'div.elfjS';
 
 const companyLogos = {
-  Google: 'https://images.icon-icons.com/729/PNG/512/google_icon-icons.com_62736.png',
   Meta: 'https://img.icons8.com/?size=100&id=PvvcWRWxRKSR&format=png&color=000000',
   Amazon: 'https://images.icon-icons.com/836/PNG/512/Amazon_icon-icons.com_66787.png',
-  Apple: 'https://img.icons8.com/?size=100&id=30840&format=png&color=000000'
+  Apple: 'https://img.icons8.com/?size=100&id=30840&format=png&color=000000',
+  Netflix: 'https://images.seeklogo.com/logo-png/32/1/netflix-logo-png_seeklogo-327627.png',
+  Google: 'https://images.icon-icons.com/729/PNG/512/google_icon-icons.com_62736.png',
 };
 
 async function getRephrasedProblem(company) {
