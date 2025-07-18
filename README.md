@@ -1,8 +1,4 @@
-Of course. Here is the content converted into a clean, well-formatted GitHub `README.md` file.
-
------
-
-# LeetStory 🚀
+# LeetStory 
 
 > Level up your LeetCode practice by transforming coding problems into engaging, real-world interview scenarios at top tech companies like Google, Meta, and Amazon (MAANG).
 
@@ -21,15 +17,15 @@ Of course. Here is the content converted into a clean, well-formatted GitHub `RE
 ## Screenshots
 
 ### Problem Description (Before)
-![LeetCode Problem Before LeetStory](./imgs/original.png)
+<img src="./imgs/original.png" alt="alt text" width="450"/>
 
 ### Story Mode Activated (After - Google)
-![LeetStory Google Mode](./imgs/wait.png)
+<img src="./imgs/wait.png" alt="alt text" width="450"/>
 
-![LeetStory Google Mode](./imgs/google.png)
+<img src="./imgs/google.png" alt="alt text" width="450"/>
 
 ### Story Mode Activated (After - Meta)
-![LeetStory Meta Mode](./imgs/meta.png)
+<img src="./imgs/meta.png" alt="alt text" width="450"/>
 -----
 
 ## How to Use
